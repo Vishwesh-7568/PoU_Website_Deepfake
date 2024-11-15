@@ -1,0 +1,611 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background: #000;
+    color: #fff;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.background-container {
+    background: url('Photos/Background.gif') no-repeat center center fixed;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#myVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: opacity 0.3s;
+}
+
+nav a:hover {
+    opacity: 0.7;
+}
+
+
+
+.title-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+.title-left, .title-right {
+    font-size:100px; /* Reduced text size */
+    font-weight: 700;
+    letter-spacing: 2px;
+    z-index: 1;
+    position: relative; /* Added position relative */
+}
+
+.model-space {
+    width: 800px;  /* Increased width */
+    height: 800px; /* Increased height */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1.5); /* Increased scale */
+    z-index: 2;
+    /* pointer-events:none; */
+}
+
+/* Adjust model-viewer styling */
+model-viewer {
+    width: 100%;
+    height: 100%;
+    --poster-color: transparent;
+    background-color: transparent;
+    --interaction-prompt: none; /* Removes the interaction prompt */
+    --interaction-prompt-threshold: 0;
+    touch-action: none; /* Prevents touch interactions */
+    /* pointer-events: none; Prevents mouse interactions */
+   /* ... existing code ... */
+
+}
+
+.title-left {
+    margin-right: 300px; /* Increased margin */
+}
+
+.title-right {
+    margin-left: 300px; /* Increased margin */
+}
+/* Add these sty
+
+les to your existing CSS */
+
+.about-section {
+    min-height: 100vh;
+    margin-top: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    padding: 100px 20px;
+    text-align: center;
+    margin-left: auto; /* Push content to right side */
+    width: 60%; /* Adjust width as needed */
+}
+
+.about-content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background: rgba(137, 125, 211, 0.1);
+    padding: 40px;
+    border-radius: 30px;
+    backdrop-filter: blur(5px);
+}
+
+.content-box {
+    background: linear-gradient(
+        to bottom,
+        rgba(137, 125, 211, 0.9) 0%,
+        rgba(70, 64, 107, 0.9) 100%
+    );
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 800px;
+    margin-top: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.content {
+    display: none;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: center;
+    padding: 20px;
+}
+
+.content.active {
+    display: block;
+}
+
+/* Adjust button spacing */
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.category-btn {
+    background: #897DD3;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.category-btn.active {
+    background: #897DD3;
+    box-shadow: 0 0 15px rgba(137, 125, 211, 0.5);
+}
+.model-space {
+    width: 800px;
+    height: 800px;
+    position: fixed; /* Change from absolute to fixed */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1.5);
+    z-index: 2;
+    transition: transform 0.1s ease-out; /* Smooth transition */
+}
+
+/* Add this to ensure the about section has space for the model */
+/* BELOW SECTION IS ABOUT CSS OF TIMELINE */
+/* Timeline Section */
+.timeline-section {
+    padding: 150px 0;
+    text-align: center;
+}
+
+.timeline-title {
+    font-size: 2.5rem;
+    margin-bottom: 80px;
+    margin-left:470px;
+    background: #897DD3;
+    padding: 10px 30px;
+    border-radius: 30px;
+    display: inline-block;
+}
+
+.timeline-container {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.timeline-bar {
+    position: absolute;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(to right, #897DD3, #46406B);
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 4px;
+}
+
+.timeline-items {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.timeline-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.timeline-content {
+    text-align: center;
+    width: 200px;
+}
+
+.timeline-content h3 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #fff;
+    background: rgba(137, 125, 211, 0.9);
+    padding: 10px;
+    border-radius: 10px;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline-content img {
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 20px;
+    border: 3px solid #897DD3;
+}
+
+/* Add dots on the timeline */
+.timeline-item::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: #897DD3;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    box-shadow: 0 0 10px rgba(137, 125, 211, 0.5);
+}
+
+/* Add connecting lines */
+.timeline-item::after {
+    content: '';
+    width: 2px;
+    height: 50px;
+    background: #897DD3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+
+
+/* Add these styles for the Threats section */
+.threats-section {
+    min-height: 100vh;
+    margin-top: 30vh;
+    padding: 100px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.threats-title {
+    font-size: 2.5rem;
+    background: #897DD3;
+    padding: 10px 40px;
+    border-radius: 30px;
+    margin-bottom: 60px;
+}
+
+.threats-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.threat-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.threat-subtitle {
+    font-size: 1.8rem;
+    background: #897DD3;
+    padding: 10px 30px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    width: fit-content;
+}
+
+.threat-content {
+    background: rgba(137, 125, 211, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 30px;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.threat-example {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(137, 125, 211, 0.2);
+    border-radius: 15px;
+    text-align: left;
+}
+
+.threat-example strong {
+    color: #897DD3;
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+/* Carousel Section Styles */
+.carousel-section {
+    min-height: 50vh;
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-title {
+    font-size: 2.5rem;
+    background: #897DD3;
+    padding: 10px 40px;
+    border-radius: 30px;
+    margin-bottom: 60px;
+    text-align: center;
+    width: fit-content;
+    margin-left: 450px;
+    margin-bottom: 150px;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 600px;
+    perspective: 1000px;
+}
+
+.carousel {
+    position: relative;
+    margin-left: 100px;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease-in-out;
+}
+
+.carousel-card {
+    position: absolute;
+    margin-top: 40px;
+    width: 400px;
+    height: 500px;
+    left: 50%;
+    top: 50%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease-in-out;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+    cursor: pointer;
+}
+
+.card-inner:hover {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgba(137, 125, 211, 0.1);
+    backdrop-filter: blur(5px);
+    border: 2px solid #897DD3;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+.card-front img, .card-back img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+
+.card-front h3, .card-back h3 {
+    padding: 20px;
+    text-align: center;
+    background: rgba(137, 125, 211, 0.3);
+    margin: 0;
+}
+
+.carousel-controls {
+    position: absolute;
+    bottom: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+   
+}
+
+.prev-btn, .next-btn {
+    margin-left: 100px;
+    background: #897DD3;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background: #746AB0;
+    box-shadow: 0 0 15px rgba(137, 125, 211, 0.5);
+    ;
+}
+
+/* Animation for cards */
+@keyframes cardEntrance {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+
+
+
+
+/* Detection Section Styles */
+.detection-section {
+    min-height: 100vh;
+    margin-top: 200px;
+    padding: 100px 0;
+    position: relative;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.detection-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    background: #897DD3;
+    padding: 10px 40px;
+    border-radius: 30px;
+    width: fit-content;
+    margin: 0 auto 60px;
+}
+
+.detection-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.model-container {
+    width: 40%;
+    height: 600px;
+    position: relative;
+}
+
+.model-container model-viewer {
+    width: 100%;
+    height: 100%;
+    --poster-color: transparent;
+    background-color: transparent;
+    animation: float 6s ease-in-out inf;
+}
+
+.info-panels {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.panel {
+    background: rgba(137, 125, 211, 0.1);
+    backdrop-filter: blur(5px);
+    border: 2px solid #897DD3;
+    border-radius: 20px;
+    padding: 30px;
+    transition: transform 0.3s ease;
+}
+
+.panel:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(137, 125, 211, 0.3);
+}
+
+.panel h2 {
+    color: #897DD3;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.panel-content {
+    display: grid;
+    gap: 20px;
+}
+
+.tool-item, .measure-item {
+    padding: 15px;
+    background: rgba(137, 125, 211, 0.05);
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.tool-item:hover, .measure-item:hover {
+    background: rgba(137, 125, 211, 0.15);
+}
+
+.tool-item h3, .measure-item h3 {
+    color: #B4AEFF;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.tool-item p, .measure-item p {
+    color: #fff;
+    line-height: 1.5;
+}

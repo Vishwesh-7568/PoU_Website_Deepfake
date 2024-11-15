@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepFakeAI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="background-container">
+        <video autoplay muted loop id="myVideo">
+            <!--  gif/video here -->
+            <source src="Photos/Background.gif" type="video/mp4">
+        </video>
+    </div>
+    
+
+    <header>
+        <div class="logo">DeepFakeAI</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About DF</a></li>
+                <li><a href="#threats">Threats</a></li>
+                <li><a href="#detection">Detection</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#resources">Resources</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="title-container">
+            <div class="title-left">DEEP</div>
+            <div class="model-space">
+                <model-viewer 
+                src="Photos/soulless.glb" 
+                alt="3D Model" 
+                auto-rotate 
+                camera-controls 
+                disable-zoom
+                
+                camera-target="10 1 100">
+            </model-viewer>
+            </div>
+            <div class="title-right">FAKES</div>
+        </div>
+    </main>
+
+    
+    <!-- Add this section after your main section -->
+<section id="about" class="about-section">
+    <h1 class="about-title">About DeepFake</h1>
+    
+    <div class="about-subtitle">What is Deepfake ?</div>
+    
+    <div class="button-group">
+        <button class="category-btn active" data-category="kids">Kids</button>
+        <button class="category-btn" data-category="student">Student</button>
+        <button class="category-btn" data-category="scientist">Scientist</button>
+    </div>
+    
+    <div class="content-box">
+        <div class="content kids-content active">
+            A deepfake is like a magic trick with videos. Imagine if someone could make a video of you doing or saying something, even if you never did it. They use computers to "pretend" with your face and voice, like a digital puppet!
+        </div>
+        <div class="content student-content">
+            
+            A deepfake is a video, photo, or audio created using artificial intelligence (AI) that can make it look like someone is doing or saying things they never did. By learning patterns in real videos, AI can mix and swap people’s faces and voices, often making it look very realistic.
+        </div>
+        <div class="content scientist-content">
+           
+            A deepfake is a synthetic media technique generated through deep learning algorithms, primarily Generative Adversarial Networks (GANs). These models analyze real media to reconstruct facial movements and voice modulations, enabling realistic digital impersonations that can deceive viewers.
+        </div>
+    </div>
+</section>
+
+
+
+<section id="timeline" class="timeline-section"></section>
+    <h1 class="timeline-title">TIMELINE OF DEEPFAKE</h1>
+    
+    <div class="timeline-container">
+        <!-- Timeline bar -->
+        <div class="timeline-bar"></div>
+        
+        <!-- Timeline items -->
+        <div class="timeline-items">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>1990s: Early Experiments in Face Swapping</h3>
+                    <img src="Photos/1990.Early swapping.jpg" alt="1990s Face Swapping">
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Early 2000s: Rise of CGI and Video Manipulation</h3>
+                    <img src="Photos/Morphing.jpeg" alt="CGI and Video Manipulation">
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>2014: Birth of Generative Adversarial Networks (GANs)</h3>
+                    <img src="Photos/GAN.jpg" alt="GANs">
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>2017: First Public Deepfakes Emerge</h3>
+                    <img src="Photos/FirstDp.jpeg" alt="First Deepfakes">
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>2021: Growing Use in Entertainment and Education</h3>
+                    <img src="Photos/images (4).jpeg" alt="Entertainment Deepfakes">
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>2024: The Future of Deepfakes</h3>
+                    <img src="Photos/2024 Future of Deepfake.webp" alt="Future of Deepfakes">
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Add this after your timeline section -->
+<section id="threats" class="threats-section">
+    <h1 class="threats-title">Threats</h1>
+    
+    <div class="threats-container">
+        <div class="threat-column">
+            <h2 class="threat-subtitle">National Security</h2>
+            <div class="threat-content">
+                <p>To impersonate government officials, military leaders, or security personnel to spread misinformation or cause panic. By making it look like a trusted figure is issuing orders or statements, bad actors could disrupt public confidence or even affect national security strategies.</p>
+                <div class="threat-example">
+                    <strong>Example:</strong> In 2019, a deepfake video of a Belgian politician was created to promote climate change action, but it also raised awareness about how realistic-looking videos could be used to misrepresent statements from leaders.
+                </div>
+                <div class="threat-example">
+                    <strong>Example:</strong> Security experts worry that deepfakes could simulate a leader's voice or image giving harmful or misleading commands to soldiers or the public, causing mass confusion or even military escalation.
+                </div>
+            </div>
+        </div>
+
+        <div class="threat-column">
+            <h2 class="threat-subtitle">Political</h2>
+            <div class="threat-content">
+                <p>To alter political discourse by creating false narratives. Fake videos can be made of politicians or public figures saying controversial or inflammatory things they never actually said. This can manipulate voter perceptions, sway public opinion, or discredit political opponents.</p>
+                <div class="threat-example">
+                    <strong>Example:</strong> In 2020, a manipulated video of U.S. Speaker Nancy Pelosi, appearing to slur her speech, circulated widely, even though it wasn't a deepfake, showcasing how easy it is to influence public opinion through digital tampering. Actual deepfakes could make these videos even more convincing.
+                </div>
+                <div class="threat-example">
+                    <strong>Example:</strong> In Brazil, researchers found that misinformation spread rapidly through deepfakes, raising concerns about their impact on political debates, especially with influential personalities involved.
+                </div>
+            </div>
+        </div>
+
+        <div class="threat-column">
+            <h2 class="threat-subtitle">Social Impact</h2>
+            <div class="threat-content">
+                <p>leading to social unrest. Fake videos of celebrities, influencers, or ordinary people can circulate quickly on social media, making it hard for people to distinguish reality from deception.</p>
+                <div class="threat-example">
+                    <strong>Example:</strong> A widely circulated deepfake of Facebook CEO Mark Zuckerberg showed him supposedly bragging about controlling people's stolen data. While it was created as an art project, it demonstrated how convincing deepfakes can impact social media trust.
+                </div>
+                <div class="threat-example">
+                    <strong>Example:</strong> In India, deepfakes have been used in propaganda videos to stir ethnic and political tensions, creating heightened conflicts and leading to dangerous situations for communities involved.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- CARDSSSSS SECTIONSSS-->
+
+<section class="carousel-section"></section>
+    <h2 class="carousel-title">Real vs DeepFake Examples</h2>
+    <div class="carousel-container">
+        <div class="carousel">
+            <!-- Card 1 -->
+            <div class="carousel-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>Real Image</h3>
+                        <img src="Photos/realactress.png" alt="Real Image">
+                    </div>
+                    <div class="card-back">
+                        <h3>DeepFake Version</h3>
+                        <img src="Photos/fakeactress.png" alt="DeepFake Version">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="carousel-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>Real Image</h3>
+                        <img src="Photos/TrumpReal.png" alt="Real Image">
+                    </div>
+                    <div class="card-back">
+                        <h3>DeepFake Version</h3>
+                        <img src="Photos/Trumpfake.png" alt="DeepFake Version">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="carousel-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>Real Image</h3>
+                        <img src="Photos/real.png" alt="Real Image">
+                    </div>
+                    <div class="card-back">
+                        <h3>DeepFake Version</h3>
+                        <img src="Photos/fake.png" alt="DeepFake Version">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 4 -->
+            <div class="carousel-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>Real Image</h3>
+                        <img src="Photos/popereal.png" alt="Real Image">
+                    </div>
+                    <div class="card-back">
+                        <h3>DeepFake Version</h3>
+                        <img src="Photos/popefake.png" alt="DeepFake Version">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 5 -->
+            <div class="carousel-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>Real Image</h3>
+                        <img src="Photos/Screenshot 2024-11-13 at 2.58.34 PM.png" alt="Real Image">
+                    </div>
+                    <div class="card-back">
+                        <h3>DeepFake Version</h3>
+                        <img src="Photos/TomFake.png" alt="DeepFake Version">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 6 -->
+            <div class="carousel-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>Real Image</h3>
+                        <img src="Photos/Realbarack.png" alt="Real Image">
+                    </div>
+                    <div class="card-back">
+                        <h3>DeepFake Version</h3>
+                        <img src="Photos/FakeBarack.png" alt="DeepFake Version">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="carousel-controls">
+            <button class="prev-btn">❮</button>
+            <button class="next-btn">❯</button>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Add after the carousel section -->
+<section id="detection" class="detection-section">
+    <h1 class="detection-title">Detection & Prevention</h1>
+    
+    <div class="detection-container">
+        <div class="model-container">
+
+
+
+
+            
+            <!-- 3D Model Viewer -->
+            <model-viewer 
+                src="Photos/small_glytchbug.glb" 
+                alt="Detection BOT" 
+                auto-rotate 
+                camera-controls 
+                disable-zoom
+                camera-orbit="0deg 75deg 75%"
+                rotation-per-second="30deg"
+                interaction-prompt="none">
+                
+            </model-viewer>
+        </div>
+
+        <div class="info-panels">
+            <div class="panel tools-panel">
+                <h2>AI Detection Tools</h2>
+                <div class="panel-content">
+                    <div class="tool-item">
+                        <h3>Visual Analysis</h3>
+                        <p>Advanced algorithms that detect inconsistencies in facial features, lighting, and shadows.</p>
+                    </div>
+                    <div class="tool-item">
+                        <h3>Audio Authentication</h3>
+                        <p>Tools that identify synthetic voices and manipulated audio patterns.</p>
+                    </div>
+                    <div class="tool-item">
+                        <h3>Metadata Verification</h3>
+                        <p>Systems that analyze digital signatures and file histories.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel measures-panel">
+                <h2>Preventive Measures</h2>
+                <div class="panel-content">
+                    <div class="measure-item">
+                        <h3>Digital Watermarking</h3>
+                        <p>Embedding unique identifiers in original content to verify authenticity.</p>
+                    </div>
+                    <div class="measure-item">
+                        <h3>Blockchain Verification</h3>
+                        <p>Using distributed ledger technology to track content origin and modifications.</p>
+                    </div>
+                    <div class="measure-item">
+                        <h3>AI Training</h3>
+                        <p>Educational programs to help people identify and report potential deepfakes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+</body>
+</html>
